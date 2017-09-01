@@ -1,0 +1,399 @@
+/* Reset */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic Element */
+html {
+    height:100%;
+}
+
+body {
+    height:100%;
+    background:#ddd;
+    font-family: "Arial", "sans-serif";
+}
+
+.main {
+    width:100%;
+    height:100%;
+    /*max-width:1280px;*/
+    margin:0 auto;
+    box-shadow:0 0 2px #333;
+    background:white;
+    font-size:0;
+    overflow:hidden;
+    position:relative;
+}
+
+/* ====== User Section ====== */
+.userSection {
+    width:100%;
+    height:40px;
+    padding-top:8px;
+    padding-right:10px;
+    box-sizing:border-box;
+    /*background:teal;*/
+    background:#333;
+    color:white;
+    text-align:right;
+    position:absolute;
+    top:0;
+    left:0;
+    border-bottom:2px solid black;
+    z-index:2;
+}
+
+.loginBtn {
+    font-size:14px;
+    height:20px;
+    line-height:20px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.userInfo {
+    height:100%;
+    display:inline-block;
+}
+
+.userInfo > div {
+    margin-top:10px;
+    height:20px;
+    line-height:20px;
+    display:table-cell;
+    vertical-align:middle;
+    font-size:14px;
+}
+
+.userPhoto {
+    width:20px;
+    background-size:100% 100%;
+    background-image:url('../images/profile_placeholder.png');
+}
+
+.userName {
+    padding-left:10px;
+}
+
+.logoutBtn {
+    padding-left:10px;
+    cursor:pointer;
+}
+
+/* ====== Menu Section ====== */
+.menuSection {
+    width:25%;
+    height:100%;
+    padding-top:40px;
+    box-sizing: border-box;
+    position:absolute;
+    top:0;
+    left:0;
+    /*border-right:1px solid white;*/
+    /*background:beige;*/
+    background:#ddd;
+}
+
+.menuContainer {
+    width:100%;
+    height:calc(100% - 26px);
+    font-size:16px;
+    box-sizing:border-box;
+    overflow:hidden;
+    padding:15px;
+    border-top:1px solid white;
+}
+
+.menuContainer p {
+    padding:6px;
+    margin:0 0 2px;
+    font-weight:bold;
+    cursor:pointer;
+    box-sizing:border-box;
+    border-radius:5px;
+}
+
+.menuContainer p:before {
+    content:'►';
+    margin-right:5px;
+}
+
+.menuContainer p.open:before {
+    content:"▼";
+}
+
+.menuContainer p:hover {
+    background:#ccc;
+}
+
+.menuContainer ul {
+    margin:0 0 2px;
+    padding-left:0px;
+    display:none;
+}
+
+.menuContainer ul.open {
+    display:block;
+}
+
+.menuContainer li {
+    margin-bottom:2px;
+    list-style:none;
+    padding:6px 4px 6px 32px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.menuContainer li.noFile {
+    color:#999;
+}
+
+.menuContainer li:hover {
+    background:#ccc;
+}
+
+.menuContainer li.active {
+    background:#aaa;
+}
+
+.menuContainer li.edit:focus {
+    outline: none;
+    background:#aaa;
+    color:white;
+}
+
+/* ====== Document Section ====== */
+.docSection {
+    width:75%;
+    height:100%;
+    padding-top:40px;
+    box-sizing: border-box;
+    position:absolute;
+    top:0;
+    right:0;
+    border-left:1px solid #333;
+}
+
+.presentSection {
+    width:100%;
+    height:calc(100% - 26px);
+    /*padding-bottom:26px;*/
+    box-sizing: border-box;
+    /*overflow-y:scroll;*/
+    border-top:1px solid white;
+}
+
+.presentContent {
+    overflow-y:scroll;
+
+    display:none;
+}
+
+.presentContent.active {
+    display:block;
+}
+
+.markdownEditor {
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    padding:15px;
+    resize: none;
+    /*overflow-y:scroll;*/
+    /*background:green;*/
+    border-width:0;
+    /*background:#F5FAFF;*/
+    /*background:#333;
+    color:#ddd;*/
+}
+
+.preview {
+    height:100%;
+    box-sizing:border-box;
+    padding:15px;
+    overflow-y:scroll;
+    background:white;
+}
+
+/* ====== Edit Tool ====== */
+.editTool {
+    width:100%;
+    padding:0 5px;
+    /*background:tan;*/
+    background:#666;
+    font-size:16px;
+    border-top:1px solid #999;
+    border-bottom:1px solid #333;
+    box-sizing: border-box;
+    color:white;
+    height:30px;
+}
+
+.editTool:nth-child(1) {
+    /*border-right:1px solid white;*/
+    z-index: 3;
+}
+
+.editTool > div {
+    margin-right:15px;
+    display:inline-block;
+    cursor:pointer;
+    padding:5px 10px;
+    /*text-shadow:0 0 1px black, 0 0 4px white;*/
+}
+
+.editTool > div:hover {
+    background:#777;
+}
+
+.editTool > div.active {
+    /*background:teal;*/
+    background:#333;
+    color:white;
+}
+
+.menuEditTool {
+    width:100%;
+    /*padding:0 5px;*/
+    /*background:tan;*/
+    background:#666;
+    font-size:16px;
+    border-top:1px solid #999;
+    border-bottom:1px solid #333;
+    box-sizing: border-box;
+    color:white;
+    height:30px;
+    overflow:hidden;
+}
+
+.menuHeader {
+    padding-right:10px;
+    margin-left:10px;
+    font-weight: bold;
+    border-right:1px solid white;
+}
+
+
+.documentList {
+    height:30px;
+    line-height:30px;
+    transition:all .3s;
+}
+
+.documentList.onEdit {
+    margin-top:-30px;
+}
+
+.documentList.editBar{
+    background:#EF801F;
+}
+
+.documentList > div {
+    margin-right:15px;
+    display:inline-block;
+    cursor:pointer;
+    /*padding:5px 10px;*/
+    /*text-shadow:0 0 1px black, 0 0 4px white;*/
+}
+
+.documentListBtn {
+    padding:0 10px;
+}
+
+.documentListBtn:hover {
+    background:#F29747;
+}
+
+
+/* ====== option Panel ====== */
+.optionBG {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgba(0, 0, 0, .5);
+    z-index:10;
+}
+
+.optionPanel {
+    padding:10px 5px;
+    background:white;
+    box-shadow:0 0 6px #333;
+    position:absolute;
+    z-index:11;
+    display:inline-block;
+}
+
+.optionPanel .optionItem {
+    font-size:16px;
+    margin-bottom:5px;
+    padding:5px 30px 5px 10px;
+    vertical-align: middle;
+    cursor:default;
+}
+
+.optionItem span {
+    height:20px;
+    line-height:20px;
+    display:inline-block;
+}
+
+.optionItem .optionIcon {
+    width:20px;
+    height:20px;
+    background-size: 100% 100%;
+    vertical-align:bottom;
+    margin-right:8px;
+}
+
+.folderIcon {
+    background-image:url('../images/folder.png');
+}
+
+.fileIcon {
+    background-image:url('../images/file.png');
+}
+
+.deleteIcon {
+    background-image:url('../images/delete.png');
+}
+
+.renameIcon {
+    background-image:url('../images/rename.png');
+}
+
+.optionItem.disable {
+    opacity:.3;
+}
+
+.optionItem:hover {
+    background:#ccc;
+}
+
+.optionItem.disable:hover {
+    background:none;
+}
+
+/* === small tool ===*/
+.loading {
+    width:25px;
+    height:25px;
+    background-image:url('../images/loading.gif');
+    background-size:100% 100%;
+    margin:4px 0 0 5px;
+}
+
+         
+@media (max-width: 720px) {
+    mediaSection {
+        width:100%;
+    }
+}
+
+/* === extend ===*/
+.hide {
+    display:none;
+}

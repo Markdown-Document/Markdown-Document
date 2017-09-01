@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>Markdown Doc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.4.1/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src="scripts/marked.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCCQNdLq5SSPdTNq59XTdTtFmWstoi5K2k",
+        authDomain: "markdown-doc.firebaseapp.com",
+        databaseURL: "https://markdown-doc.firebaseio.com",
+        storageBucket: "markdown-doc.appspot.com",
+        messagingSenderId: "527979480605"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/main.js"></script>
+    <!--<script>hljs.initHighlightingOnLoad();</script>-->
+</head>
+
+<body>
+    <div class="main">
+        <!-- user login -->
+        <div class="userSection">
+            <div id="loginBtn" class="loginBtn">login</div>
+            <div id="userInfo" class="userInfo hide">
+                <div id="userPhoto" class="userPhoto"></div>
+                <div id="userName" class="userName"></div>
+                <div id="logoutBtn" class="logoutBtn">logout</div>
+            </div>
+        </div>
+        
+        <!-- Menu List -->
+        <div id="menuSection" class="menuSection">
+            <div id="menuEditTool" class="menuEditTool">
+                <div id="documentList" class="documentList">
+                    <div class="menuHeader">Document List</div>
+                </div>
+                <div class="documentList editBar">
+                    <div class="menuHeader edit">Edit Mode</div>
+                    <div id="menuSaveBtn" class="documentListBtn">submit</div>
+                    <div id="menuCancelBtn" class="documentListBtn">cancel</div>
+                </div>
+            </div>
+            <div id="menuContainer" class="menuContainer">
+                <!--<div id="menuLoading" class="loading"></div>-->
+            </div>
+        </div>
+        
+        <!-- Document Present -->
+        <div id="docSection" class="docSection">
+            <!-- Edit Tool -->
+            <div id="editTool" class="editTool">
+                <div id="viewBtn" class="active">view</div>
+                <div id="editBtn" class="">edit</div>
+                <div id="previewBtn" class="">preview</div>
+                <div id="submitBtn" class="">submit</div>
+            </div>
+            <!-- Present View -->
+            <div id="presentSection" class="presentSection">
+                <div id="view" class="preview markdown-body presentContent">
+                    <!--<div id="menuLoading" class="loading"></div>-->
+                </div>
+                <textarea id="markdownEditor" class="markdownEditor presentContent"></textarea>
+                <div id="preview" class="preview markdown-body presentContent"></div>
+            </div>
+        </div>
+        
+        <!-- option Panel -->
+        <div id="optionBG" class="optionBG hide">
+            <div id="optionPanel" class="optionPanel">
+                <div id="folderBtn" class="optionItem"><span class="optionIcon folderIcon"></span><span>new folder</span></div>
+                <div id="fileBtn" class="optionItem"><span class="optionIcon fileIcon"></span><span>new file</span></div>
+                <div id="renameBtn" class="optionItem"><span class="optionIcon renameIcon"></span><span>rename</span></div>
+                <div id="deleteBtn" class="optionItem"><span class="optionIcon deleteIcon"></span><span>delete</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
