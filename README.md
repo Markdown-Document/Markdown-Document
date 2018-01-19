@@ -1,7 +1,21 @@
 # Markdown-Document
 
-Writing document with Markdown
+native javascript + [markdown-parser](https://github.com/chjj/marked) + [markdown-css](https://github.com/sindresorhus/github-markdown-css) + firebase
 
-Save on firebase or any other database
+<br />
 
-A Open Source Project
+## Introducing to Markdown Document
+
+* Writing document with Markdown
+
+* Save on firebase or any other database
+
+* A Open Source Project
+
+<br />
+
+## Screenshot
+
+![screenshot](https://github.com/krmfla/Markdown-Document/blob/master/images/screenshot.jpg "Screenshot")
+
+![screenshot](https://github.com/krmfla/Markdown-Document/blob/master/images/screenshot2.jpg "Screenshot")
